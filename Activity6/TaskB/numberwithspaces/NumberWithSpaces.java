@@ -14,17 +14,24 @@ public class NumberWithSpaces {
         String currentDirectory = System.getProperty("user.dir");
         System.out.println("Current working directory: " + currentDirectory);
 
-        // Assume the filename is "number.txt" in the current directory
-        String filename = currentDirectory + "/number.txt";
+        // Adjust the filename to look inside the "numberwithspaces" folder
+        String filename = currentDirectory + File.separator + "numberwithspaces" + File.separator + "number.txt";
+
+        // Check if the file exists
+        File file = new File(filename);
+        if (!file.exists()) {
+            System.out.println("File not found: " + filename);
+            return;
+        }
 
         try {
-            // Reading the number from the fixed file in the current directory
+            // Reading the number from the file
             BufferedReader reader = new BufferedReader(new FileReader(filename));
             String numberStr = reader.readLine();
             reader.close();
 
-            // Writing separated digits to separated.txt and printing to console
-            BufferedWriter writer = new BufferedWriter(new FileWriter(currentDirectory + "/separated.txt"));
+            // Writing separated digits to separated.txt
+            BufferedWriter writer = new BufferedWriter(new FileWriter(currentDirectory + File.separator + "numberwithspaces" + File.separator + "separated.txt"));
             System.out.print("Separated digits: ");
             
             // Loop through each character in the string (each digit)
