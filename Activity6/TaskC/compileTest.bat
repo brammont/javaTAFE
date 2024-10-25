@@ -1,8 +1,8 @@
+
 @echo off
 REM Set the JUnit jar path
-set JUNIT_JAR=path\to\junit-platform-console-standalone-<version>.jar
-set JUNIT_API_JAR=path\to\junit-jupiter-api-<version>.jar
+set JUNIT_JAR=lib/junit-platform-console-standalone-1.8.0.jar
 
 REM Compile the test file with the JUnit library included
-javac -cp ".;%JUNIT_JAR%;%JUNIT_API_JAR%" computemethodsapp\ComputeMethodsAppIT.java
+javac -cp ".;target/classes;%JUNIT_JAR%" -d target/test-classes src/test/java/com/mycompany/computemethodsapp/*.java
 pause

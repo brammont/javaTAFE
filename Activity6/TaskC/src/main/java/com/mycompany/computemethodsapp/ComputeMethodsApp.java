@@ -1,8 +1,13 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
 
-
-package computemethodsapp;
+package com.mycompany.computemethodsapp;
 import java.util.Scanner;
-
+/**
+ *
+ * @author 30085203
+ */
 public class ComputeMethodsApp {
 
     public static void main(String[] args) {
