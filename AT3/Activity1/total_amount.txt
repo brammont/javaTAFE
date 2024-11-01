@@ -1,0 +1,2 @@
+You ordered 26 eggs.
+That is 2 dozen eggs at $7.25 per dozen and 2 additional eggs at $0.75 each for a total of $16.00.
